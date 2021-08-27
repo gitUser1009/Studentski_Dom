@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projektdom.ReservationsController">
+   <children>
+      <AnchorPane prefHeight="768.0" prefWidth="365.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Studenti - Filtri za pretrazivanje">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="14.0" layoutY="44.0" prefHeight="255.0" prefWidth="80.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="70.0" text="Ime">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" text="Prezime">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="70.0" text="Fakultet">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="70.0" text="Godina">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="85.0" prefHeight="25.0" prefWidth="70.0" text="Zupanija">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="70.0" text="Opcina">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="135.0" prefHeight="25.0" prefWidth="70.0" text="Bodovi">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="94.0" layoutY="44.0" prefHeight="255.0" prefWidth="271.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="tfFilterName" />
+                  <TextField fx:id="tfFilterSurname" layoutX="10.0" layoutY="10.0" />
+                  <TextField fx:id="tfFilterCollege" layoutX="10.0" layoutY="80.0" />
+                  <TextField fx:id="tfFilterYear" layoutX="10.0" layoutY="115.0" />
+                  <TextField fx:id="tfFilterCounty" layoutX="10.0" layoutY="150.0" />
+                  <TextField fx:id="tfFilterCity" layoutX="10.0" layoutY="185.0" />
+                  <HBox prefHeight="25.0" prefWidth="271.0">
+                     <children>
+                        <Label text="Od">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfFilterPoints1" prefHeight="25.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label layoutX="10.0" layoutY="10.0" text="Do">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="21.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfFilterPoints2" layoutX="32.0" layoutY="10.0" prefHeight="25.0" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="14.0" layoutY="299.0" prefHeight="50.0" prefWidth="351.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buttonStudentFilter" mnemonicParsing="false" onAction="#actionStudentFilter" prefHeight="35.0" prefWidth="80.0" text="Filtriraj" />
+                  <Button fx:id="buttonFilterClear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionStudentFilterClear" prefHeight="35.0" prefWidth="80.0" text="Ocisti polja" />
+               </children>
+            </HBox>
+            <Label layoutX="14.0" layoutY="349.0" text="Sobe - Filtri za pretrazivanje">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="14.0" layoutY="379.0" prefHeight="255.0" prefWidth="109.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="90.0" text="Zgrada">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="90.0" text="Broj sobe">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="35.0" prefHeight="25.0" prefWidth="90.0" text="Broj kreveta">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="106.0" text="Broj slobodnih">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="85.0" prefHeight="25.0" prefWidth="90.0" text="Klima">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="90.0" text="Balkon">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="80.0" prefHeight="25.0" prefWidth="90.0" text="Frizider">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="125.0" layoutY="379.0" prefHeight="255.0" prefWidth="231.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="tfFilterBuilding" />
+                  <TextField fx:id="tfFilterRoomNumber" layoutX="10.0" layoutY="35.0" />
+                  <TextField fx:id="tfFilterBedNumber" layoutX="10.0" layoutY="60.0" />
+                  <TextField fx:id="tfFilterFreeBedNumber" layoutX="10.0" layoutY="80.0" prefHeight="25.0" />
+                  <HBox prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Sve">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioFilterAcAll" mnemonicParsing="false" selected="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioFilterAc" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Label layoutX="10.0" layoutY="10.0" text="Da">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterAcYes" layoutX="33.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterAc">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <Label layoutX="95.0" layoutY="10.0" text="Ne">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterAcNo" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterAc">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="115.0" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Sve">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioFilterBalconyAll" mnemonicParsing="false" selected="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioFilterBalcony" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Label layoutX="10.0" layoutY="10.0" text="Da">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterBalconyYes" layoutX="33.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterBalcony">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <Label layoutX="95.0" layoutY="10.0" text="Ne">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterBalconyNo" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterBalcony">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="150.0" prefHeight="25.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Sve">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radioFilterFridgeAll" mnemonicParsing="false" selected="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radioFilterFridge" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Label layoutX="10.0" layoutY="10.0" text="Da">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterFridgeYes" layoutX="33.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterFridge">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <Label layoutX="95.0" layoutY="10.0" text="Ne">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="radioFilterFridgeNo" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$radioFilterFridge">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="14.0" layoutY="634.0" prefHeight="50.0" prefWidth="351.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buttonRoomFilter" mnemonicParsing="false" onAction="#actionRoomFilter" prefHeight="35.0" prefWidth="80.0" text="Filtriraj" />
+                  <Button fx:id="buttonRoomFilterClear" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionRoomFilterClear" prefHeight="35.0" prefWidth="80.0" text="Ocisti polja" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="768.0" prefWidth="840.0">
+         <children>
+            <VBox prefHeight="768.0" prefWidth="840.0">
+               <children>
+                  <TableView fx:id="tableViewStudent" onMouseClicked="#getRowInfoStudent" prefHeight="320.0" prefWidth="825.0">
+                     <columns>
+                        <TableColumn fx:id="colID" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="125.0" text="Ime" />
+                        <TableColumn fx:id="colSurname" prefWidth="125.0" text="Prezime" />
+                        <TableColumn fx:id="colCollege" text="Fakultet" />
+                        <TableColumn fx:id="colYear" prefWidth="60.0" text="Godina" />
+                        <TableColumn fx:id="colCounty" prefWidth="100.0" text="Zupanija" />
+                        <TableColumn fx:id="colCity" prefWidth="125.0" text="Opcina" />
+                        <TableColumn fx:id="colPoints" prefWidth="75.0" text="Bodovi" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <TableView fx:id="tableViewRoom" onMouseClicked="#getRowInfoRoom" prefHeight="320.0" prefWidth="825.0">
+                     <columns>
+                        <TableColumn fx:id="colIDroom" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="colBuilding" prefWidth="110.0" text="Zgrada" />
+                        <TableColumn fx:id="colRoomNumber" prefWidth="100.0" text="Broj sobe" />
+                        <TableColumn fx:id="colBedNumber" prefWidth="90.0" text="Broj kreveta" />
+                        <TableColumn fx:id="colFreeBeed" prefWidth="90.0" text="Broj Slobodnih" />
+                        <TableColumn fx:id="colAc" prefWidth="65.0" text="Klima" />
+                        <TableColumn fx:id="colBalcony" prefWidth="65.0" text="Balkon" />
+                        <TableColumn fx:id="colFridge" prefWidth="65.0" text="Frizider" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="15.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="330.0">
+                           <children>
+                              <Button fx:id="buttonCreateReservation" mnemonicParsing="false" onAction="#actionCreateReservation" prefHeight="35.0" prefWidth="120.0" text="Napravi rezervaciju">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <HBox prefHeight="50.0" prefWidth="660.0">
+                                 <children>
+                                    <Label text="Student: &#10;Soba: &#10;" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox prefHeight="50.0" prefWidth="150.0">
+                                       <children>
+                                          <Label fx:id="studentLabel">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="roomLabel" layoutX="10.0" layoutY="10.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="350.0">
+                           <children>
+                              <Label text="Studenti u sobi: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelInRoom" alignment="TOP_LEFT" prefHeight="94.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="200.0" prefWidth="170.0" spacing="10.0">
+                           <children>
+                              <CheckBox fx:id="checkbocAutoPrice" mnemonicParsing="false" onAction="#actionAutoPrice" text="automatska cijena">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <TextField fx:id="tfPrice" maxWidth="100.0" prefHeight="25.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="783.0" prefWidth="300.0">
+         <children>
+            <VBox layoutX="16.0" layoutY="14.0" prefHeight="738.0" prefWidth="130.0" spacing="20.0">
+               <children>
+                  <Button fx:id="buttonToStudent" mnemonicParsing="false" onAction="#actionToStudent" prefHeight="40.0" prefWidth="130.0" text="Studenti" textAlignment="CENTER" />
+                  <Button fx:id="buttonToRooms" mnemonicParsing="false" onAction="#actionToRooms" prefHeight="40.0" prefWidth="130.0" text="Sobe" textAlignment="CENTER" />
+                  <Button fx:id="buttonToResCreate" mnemonicParsing="false" onAction="#actionToResCreate" prefHeight="40.0" prefWidth="130.0" text="Kreiranje rezervacija" textAlignment="CENTER" />
+                  <Button fx:id="buttonToResEdit" mnemonicParsing="false" onAction="#actionToResEdit" prefHeight="40.0" prefWidth="130.0" text="Uređivanje / Brisanje&#10;rezervacija" textAlignment="CENTER" />
+                  <Button fx:id="buttonToUsers" mnemonicParsing="false" onAction="#actionToUsers" prefHeight="40.0" prefWidth="130.0" text="Korisnici" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="317.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#actionLogout" prefHeight="40.0" prefWidth="130.0" text="Odjava" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
