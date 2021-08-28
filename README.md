@@ -7,7 +7,7 @@ Connection name: baza1 ( nije potrebno ali preporučljivo )\
 Hostname: 127.0.0.1\
 Port: 3306\
 Username: root\
-Password: 1234\
+Password: 1234
 
 Nakon što je kreirana konekcija, unutar nje je potrebno pokrenuti sljedeći SQL upit:
 https://drive.google.com/file/d/1GSTQ4a3SBYIWCuezeDMM4R8gBTZfdz90/view?usp=sharing
