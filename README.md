@@ -14,3 +14,6 @@ https://drive.google.com/file/d/1GSTQ4a3SBYIWCuezeDMM4R8gBTZfdz90/view?usp=shari
 Ovaj upit bi trebao kreirati bazu podataka sa svim potrebnim tablicama i nekim početnim podacima sa kojima se može testirati program.
 
 Ovaj projekat koristi: openjdk-16 version 16.0.2
+
+# Screenshots
+
