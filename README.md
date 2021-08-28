@@ -1,3 +1,4 @@
+
 # Studentski_Dom
 
 Za kreiranje konekcije i baze podataka na kakvu će se moći spojiti ovaj program korišten je MySQL Workbench
@@ -16,4 +17,6 @@ Ovaj upit bi trebao kreirati bazu podataka sa svim potrebnim tablicama i nekim p
 Ovaj projekat koristi: openjdk-16 version 16.0.2
 
 # Screenshots
+![1  Login](https://user-images.githubusercontent.com/81412936/131218096-061f08e0-a9e5-4f3b-b04f-9bb793b7a6ba.PNG)
+![4  Kreacija smjestaj](https://user-images.githubusercontent.com/81412936/131218109-0cd25d3f-ad30-4db0-a313-bc3727309c25.PNG)
 
